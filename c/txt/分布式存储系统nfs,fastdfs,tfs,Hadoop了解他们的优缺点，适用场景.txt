@@ -1,0 +1,1 @@
+分布式存储系统nfs,fastdfs,tfs,Hadoop了解他们的优缺点，适用场景

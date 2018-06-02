@@ -1,0 +1,20 @@
+ssdb 
+
+SSDB - A fast NoSQL database, an alternative to Redis 
+SSDB是一个开源的高性能数据库服务器,使用Google的LevelDB作为存储引擎
+
+leveldb
+Leveldb是一个google实现的非常高效的kv数据库
+
+rocksdb
+RocksDB 是一个来自 facebook 的可嵌入式的支持持久化的 key-value 存储系统，也可作为 C/S 模式下的存储数据库，但主要目的还是嵌入式。RocksDB 基于 LevelDB 构建。
+
+
+
+
+TIDB中go占比97%，TIKV是rust的。TIKV用go的etcd加c++的rocksdb。
+
+整个 TiKV 的底层本地存储是依赖了 RocksDB，RocksDB 是一个单机的嵌入式 KV 数据库，是一个 LSM Tree的实现，是 Facebook 基于 LevelDB 的修改版本，其特点是写入性能特别好，数据存储是有序的 KV Pairs，对于有序 key 的迭代的场景访问效率较高。
+
+“我们在我们的大规模分布式存储产品——TiKV中广泛使用etcd。我们将etcd的raft库嵌入到我们存储层去支持一致性复制，并且我们在TiKV集群中使用etcd去协调存储节点，”PingCAP的CEO刘琦介绍说。“我们非常高兴与etcd团队合作，并乐于见到他们新版本的发布！”
+ 
